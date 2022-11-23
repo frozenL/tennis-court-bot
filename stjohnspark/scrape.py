@@ -44,9 +44,9 @@ def scrape(target):
 def main(target):
     seed(datetime.now().microsecond)
     while True:
-        if datetime.now().hour >= 7 and datetime.now().hour <= 24:
-            scrape(target)
-        sleep_time = 60*15 + int(random() * 15) * 60
+        # if datetime.now().hour >= 7 and datetime.now().hour <= 24:
+        scrape(target)
+        sleep_time = 60*5 + int(random() * 10) * 60
         print(f"sleep for {sleep_time}s ({sleep_time/60}mins)")
         time.sleep(sleep_time)
 
